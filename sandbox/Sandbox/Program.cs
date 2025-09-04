@@ -7,3 +7,7 @@ class Program
         Console.WriteLine("Hello World!!!");
     }
 }
+
+// git add .
+// git commit -m "<changes>"
+// git push
