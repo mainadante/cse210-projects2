@@ -26,12 +26,50 @@ class Program
             }
 
         }
-        
-        Console.WriteLine("You entered:");
+
+        int sum = 0;
+        foreach (int n in listNumbers)
+        {
+            sum += n;
+        }
+        Console.WriteLine($"The sum is: {sum}");
+
+        float average = 0;
+        if (listNumbers.Count > 0)
+        {
+            average = (float)sum / listNumbers.Count;
+        }
+        Console.WriteLine($"The average is: {average}");
+
+        int largest = listNumbers[0];
+        foreach (int n in listNumbers)
+        {
+            if (n > largest)
+            {
+                largest = n;
+            }
+        }
+        Console.WriteLine($"The largest number is: {largest}");
+
+        int smallestPositive = int.MaxValue;
+        foreach (int n in listNumbers)
+        {
+            if (n > 0 && n < smallestPositive)
+            {
+                smallestPositive = n;
+            }
+        }
+        Console.WriteLine($"The smallest positive number is: {smallestPositive}");
+
+        listNumbers.Sort();
+        Console.WriteLine("The sorted list is: ");
         foreach (int n in listNumbers)
         {
             Console.WriteLine(n);
         }
+
+
+
 
 
     }
